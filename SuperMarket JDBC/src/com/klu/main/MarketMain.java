@@ -22,6 +22,7 @@ public class MarketMain {
 			System.out.println("1.Insertion");
 			System.out.println("2.Display");
 			System.out.println("3.Total Cost");
+			System.out.println("4.Exit");
 			System.out.println("Enter an number to perform Operation : ");
 			int ch = sc.nextInt();
 			switch(ch)
@@ -55,7 +56,8 @@ public class MarketMain {
 						 cd.items_totalCost();
 				  		 break;
 				  		 
-				default : System.exit(0);
+				case 4 : cd.Delete_Records();
+						  break;
 			}
 			System.out.println("Enter your choice to repeat the Market operation [ Yes/No ] : ");
 			choice = sc.next();

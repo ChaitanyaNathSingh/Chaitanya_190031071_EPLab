@@ -51,4 +51,13 @@ public class DOA {
 		}
 		con.close();
 	}
+	
+	public void Delete_Records() throws ClassNotFoundException, SQLException{
+		
+		Connection con=DBUtil.DBConnection();
+		PreparedStatement ps=con.prepareStatement("DELETE FROM sales");  
+		int row = ps.executeUpdate();
+		System.out.println("Number of deleted records: " + row);
+		con.close();
+	}
 }
