@@ -16,16 +16,6 @@
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>RegDisplay</display-name>
-    <servlet-name>RegDisplay</servlet-name>
-    <servlet-class>Package.RegDisplay</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>RegDisplay</servlet-name>
-    <url-pattern>/RegDisplay</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
     <display-name>searchPswd</display-name>
     <servlet-name>searchPswd</servlet-name>
     <servlet-class>Package.searchPswd</servlet-class>
