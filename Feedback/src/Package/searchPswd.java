@@ -5,6 +5,7 @@ import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -33,8 +34,10 @@ public class searchPswd extends HttpServlet {
 			s = s+log.search(emailid);
 			
 			if(s.equals(pswd)){
+				Cookie ck = new Cookie("email_save",emailid);
 				RequestDispatcher rd = request.getRequestDispatcher("feedback.html");
 				rd.include(request, response);
+				response.addCookie(ck);
 			}
 			else {
 				RequestDispatcher rd = request.getRequestDispatcher("error_login.html");

@@ -34,4 +34,24 @@
     <servlet-name>feedback</servlet-name>
     <url-pattern>/feedback</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FeedbackDisplay</display-name>
+    <servlet-name>FeedbackDisplay</servlet-name>
+    <servlet-class>Package.FeedbackDisplay</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FeedbackDisplay</servlet-name>
+    <url-pattern>/FeedbackDisplay</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>logout</display-name>
+    <servlet-name>logout</servlet-name>
+    <servlet-class>Package.logout</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>logout</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
 </web-app>
