@@ -7,6 +7,7 @@ import java.sql.SQLException;
 
 import com.klu.Bean.StudentBean;
 import com.klu.Connections.DBUtil;
+import com.mysql.jdbc.CallableStatement;
 
 public class StudentInsertion {
 	
@@ -83,6 +84,22 @@ public class StudentInsertion {
 			System.out.print("	"+display.getString(3));
 			System.out.println();
 		}
+		con.close();
+	}
+	
+	public void procedure(int num) throws ClassNotFoundException, SQLException {
+		Connection con=DBUtil.DBConnection();
+		CallableStatement cs = (CallableStatement) con.prepareCall("call student.procedure_chaitu(?);");
+		cs.setInt(1, num);
+		cs.execute();
+		ResultSet rs = cs.executeQuery();
+		while(rs.next()) {
+			System.out.print(rs.getInt(1));
+			System.out.print("	"+rs.getString(2));
+			System.out.print("	"+rs.getString(3));
+			System.out.println();
+		}
+		cs.close();
 		con.close();
 	}
 }

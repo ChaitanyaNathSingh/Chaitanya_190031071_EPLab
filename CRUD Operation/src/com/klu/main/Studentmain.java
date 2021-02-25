@@ -15,6 +15,9 @@ public class Studentmain {
 		StudentInsertion si = new StudentInsertion();
 		sc = new Scanner(System.in);
 		String choice;
+		System.out.println("Enter a Number to Call Procedure : ");
+		int number = sc.nextInt();
+		si.procedure(number);
 		do 
 		{
 			System.out.println("Select an CRUD Operation");
